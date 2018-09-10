@@ -1,0 +1,10 @@
+.script-list {
+    background: white;
+    height: 100%;
+    padding: 2rem;
+    box-shadow: 2px;
+    display: flex;
+    margin: 4.7rem 2rem 0 2rem;
+    width: 100%;
+    flex-flow: row wrap;
+}

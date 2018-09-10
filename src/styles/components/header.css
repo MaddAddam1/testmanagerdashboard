@@ -1,0 +1,55 @@
+
+
+.app-header {
+    width: 100%;
+    position: fixed;
+    background: rgb(137, 25, 211);
+    top: 0;
+    left: 0;
+    height: 56px;
+    color: white; 
+}
+
+.app__logo {
+    margin-left: 1.5rem;
+}
+
+.app__logo a {
+     color: white;
+     text-decoration: none;
+     font-size: 1.5rem;
+}
+
+.app__items {
+
+    color: white;
+    text-decoration: none;
+}
+
+.app__items a:hover,
+.app__items a:active {
+    color: red;
+}
+
+.app__items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: white;
+}
+
+.app__items li {
+    padding: 2rem; //5
+    color: white;
+}
+.app {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.spacer {
+   flex: 1;
+}

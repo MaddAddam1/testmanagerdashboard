@@ -1,0 +1,42 @@
+.sidebar {
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0px 5px black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar a {
+    color: purple;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sidebar li {
+    margin: 0.5rem 0;
+
+}
+
+.sidebar a:hover,
+.sidebar a:active {
+    color: red;
+}
