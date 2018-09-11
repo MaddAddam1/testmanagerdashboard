@@ -8,6 +8,7 @@ import { createStore, combineReducers } from 'redux';
 import DashboardContainer from './components/DashboardContainer';
 import scriptsReducer from './reducers/scriptsReducer';
 import './styles/base/base.css';
+import Home from './components/Home';
 
 const store = createStore(
     combineReducers({
@@ -18,11 +19,11 @@ const store = createStore(
 const jsx = (
 
     <Provider store={store}>
-        <DashboardContainer/>
+        <Home/>
     </Provider>
 )
 
 
 
-ReactDOM.render(<DashboardContainer />, document.getElementById('root'));
+ReactDOM.render(jsx, document.getElementById('root'));
 registerServiceWorker();
