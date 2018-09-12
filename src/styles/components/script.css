@@ -1,0 +1,31 @@
+.view-script-div {
+   
+    height: auto;
+    width: 100%;
+    background: blue;
+    position: relative;
+    margin: 4rem auto;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.script-details-div {
+    padding: 1rem;
+    
+}
+
+.view-script-div h1 {
+    font-size:  3rem;
+    text-align: center;
+
+}
+
+.view-script-div p {
+    padding: 1rem;
+    font-size:  1.8rem;
+    text-align: left;
+}
+
+.script-card {
+    font-size: 2rem;
+}

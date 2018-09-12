@@ -1,11 +1,18 @@
 import React from 'react';
+import { BrowserRouter, Router, Route } from 'react-router-dom';
+import { Card, CardActions, Button } from '@material-ui/core';
+import { connect } from 'react-redux';
+import Script from './Script';
 
-const ViewScriptPage = () => {
+
+const ViewScriptPage = (props) => {
 
     return (
 
         <div>
             <h3>View the Script</h3>
+            <Script {...props.script}/>
+              
         </div>
 
     );
@@ -13,4 +20,12 @@ const ViewScriptPage = () => {
 
 }
 
-export default ViewScriptPage;
+
+const mapStateToProps = (state, props) => {
+    return {
+        script: state.scripts.find((script) => script.ScriptID === props.match.params.ScriptID)
+    };
+};
+
+
+export default connect(mapStateToProps)(ViewScriptPage);

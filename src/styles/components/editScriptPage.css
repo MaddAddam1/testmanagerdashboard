@@ -1,0 +1,11 @@
+.edit-script-div {
+   
+    
+    height: auto;
+    width: 100%;
+    background: blue;
+    position: relative;
+    margin: 6rem auto;
+    padding: 0;
+    font-size: 2rem;;
+}

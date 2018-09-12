@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Router} from 'react-router-dom';
+import { removeScript, viewScript, editScript } from './../actions/scripts';
 
 
-const ScriptListItem = (props) => {
+
+const ScriptListItem = (props, dispatch) => {
 
     const item = props.scripts.map(script => {
         return (
@@ -31,11 +33,15 @@ const ScriptListItem = (props) => {
                 <span className="slds-assistive-text">View</span>
             </button>
 
-              <button className="slds-button slds-button--icon" title="edit">
+            <button className="slds-button slds-button--icon" title="edit" onClick={(e) => {
+                  dispatch(editScript(script.ScriptID));
+              }}>
                 <span className="slds-assistive-text">Edit</span>
             </button>
 
-            <button>
+            <button onClick={(e) => {
+            dispatch(removeScript(script.ScriptID ));
+        }}>
                 <span className="slds-assistive-text">Delete</span>
             </button>
             </td>
