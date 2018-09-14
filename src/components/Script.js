@@ -37,7 +37,7 @@ const Script = withRouter(({history, props, dispatch, LastRunBy, LastDateModifie
             <div className="view-script-div">
                 <Card className="script-card">
                     <CardContent>
-                    <div className="script-details-div">
+                    <div className="script-details-div" >
                         <Typography variant="headline" component="h1">{ScriptName}</Typography>
                         <Typography variant="headline" component="h5">Created By: {CreatedBy}</Typography>
                         <Typography variant="headline" component="h5">Last Modified: {LastDateModified}</Typography>

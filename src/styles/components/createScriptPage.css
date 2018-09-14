@@ -1,4 +1,4 @@
-.edit-script-div {
+.create-script-div {
    
     
     height: auto;
@@ -10,8 +10,19 @@
     font-size: 2rem;
 }
 
-.edit-script-div h1 {
+.create-script-paper {
     font-size:  3rem;
+    align-content: center;
+    height: 100%;
+    
+
+}
+
+.create-script-div h1 {
+
     text-align: center;
+    font-size: 3rem;
+    font-weight: 3rem;
+
 
 }

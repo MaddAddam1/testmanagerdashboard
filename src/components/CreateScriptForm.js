@@ -10,7 +10,7 @@ import Former from './ScriptTextEditorForm';
 
 
 
-class ScriptForm extends React.Component {
+class CreateScriptForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -25,17 +25,17 @@ class ScriptForm extends React.Component {
     }
 
     
-    onScriptNameChange = (e) => {
+    onScriptNameChange = ({e}) => {
         const ScriptName = e.target.value;
         this.setState(() => ({ ScriptName }));
     }
 
-    onScriptDescriptionChange = (e) => {
+    onScriptDescriptionChange = ({e}) => {
         const ScriptDesc = e.target.value;
         this.setState(() => ({ ScriptDesc }));
     }
 
-    onSubmit = (e) => {
+    onSubmit = ({e}) => {
         e.preventDefault();
         if (!this.state.ScriptDesc || !this.state.ScriptName) {
             this.setState(() => ({ error: 'Please prove a Name and the Details of the script'}));
@@ -82,4 +82,4 @@ class ScriptForm extends React.Component {
 
 }
 
-export default connect()(ScriptForm);
+export default connect()(CreateScriptForm);

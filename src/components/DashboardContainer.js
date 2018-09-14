@@ -27,7 +27,7 @@ class DashboardContainer extends React.Component {
                         <Route path="/scripts" component={ScriptList} exact={true}/>
                         <Route path="/scripts/:ScriptID" component={ViewScriptPage} exact={true}/>
                         <Route path="/scripts/edit/:ScriptID" component={EditScriptPage} exact={true}/>
-                        <Route path="/scripts/create" component={CreateScriptPage} exact={true}/>
+                        <Route path="/create" component={CreateScriptPage} exact={true}/>
                     </div>
                 </BrowserRouter>
             </div>

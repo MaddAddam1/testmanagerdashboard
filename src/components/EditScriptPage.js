@@ -20,7 +20,14 @@ const EditScriptPage = (props) => {
                     </div>
                         <Typography component="p">{props.script.ScriptDesc}</Typography>
                     
-            
+                <ScriptForm 
+                        {...props.script}
+                onSubmit={(script) => {
+                    props.dispatch(editScript(props.script.ScriptID, script));
+                    props.history.push("/scripts")
+                    console.log('Script updated: ', script);
+                }}/>
+              
                 </CardContent>
             </Card>
         </div>
