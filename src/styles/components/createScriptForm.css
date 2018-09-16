@@ -1,0 +1,30 @@
+.create-script-form {
+    align-content: center;
+    text-align: center;
+}
+    
+.script-name-input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+ 
+
+}
+
+.script-details {
+    width: 75%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+.create-script-form button {
+    margin: 8px 0;
+    position: relative;
+    display: flex;
+    color: green;
+    
+}

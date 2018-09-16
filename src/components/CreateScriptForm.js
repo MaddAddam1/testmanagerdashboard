@@ -5,7 +5,7 @@ import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/
 import '../styles/components/script.css';
 import moment from 'moment';
 import { Field, reduxForm, reducer, Form, FormSection, Fields } from "redux-form";
-
+import '../styles/components/createScriptForm.css';
 import Former from './ScriptTextEditorForm';
 
 
@@ -56,9 +56,10 @@ class CreateScriptForm extends React.Component {
         render () {
             return (
 
-                <div >
-                    <form onSubmit={this.onSubmit}>
+                <div>
+                    <form className="create-script-form" onSubmit={this.onSubmit}>
                         <input
+                        className="script-name-input"
                         type="text"
                         placeholder="Script Name"
                         autoFocus
@@ -66,6 +67,7 @@ class CreateScriptForm extends React.Component {
                         onChange={this.onScriptNameChange}
                         />
                         <textarea
+                        className="script-details"
                         placeholder="Script Details"
                         value={this.state.ScriptDesc}
                         onChange={this.onScriptDescriptionChange}
