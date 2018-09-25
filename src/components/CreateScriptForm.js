@@ -7,7 +7,8 @@ import moment from 'moment';
 import { Field, reduxForm, reducer, Form, FormSection, Fields } from "redux-form";
 import '../styles/components/createScriptForm.css';
 import Former from './ScriptTextEditorForm';
-
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 
 class CreateScriptForm extends React.Component {
@@ -25,17 +26,17 @@ class CreateScriptForm extends React.Component {
     }
 
     
-    onScriptNameChange = ({e}) => {
+    onScriptNameChange = (e) => {
         const ScriptName = e.target.value;
         this.setState(() => ({ ScriptName }));
     }
 
-    onScriptDescriptionChange = ({e}) => {
+    onScriptDescriptionChange = (e) => {
         const ScriptDesc = e.target.value;
         this.setState(() => ({ ScriptDesc }));
     }
 
-    onSubmit = ({e}) => {
+    onSubmit = (e) => {
         e.preventDefault();
         if (!this.state.ScriptDesc || !this.state.ScriptName) {
             this.setState(() => ({ error: 'Please prove a Name and the Details of the script'}));
@@ -72,6 +73,7 @@ class CreateScriptForm extends React.Component {
                         value={this.state.ScriptDesc}
                         onChange={this.onScriptDescriptionChange}
                         />
+                        
                         <button>
                         Add Script
                         </button>
@@ -85,3 +87,51 @@ class CreateScriptForm extends React.Component {
 }
 
 export default connect()(CreateScriptForm);
+
+
+
+// <ReactQuill
+// name="editor" 
+// value={this.state.ScriptDesc}
+// onChange={this.onScriptDescriptionChange}
+// theme="snow" modules={CreateScriptForm.modules}
+// formats={CreateScriptForm.formats}
+// placeholder={'Enter script details...'}
+// />
+//               <button>
+//               Add Script
+//               </button>
+//           </form>
+
+
+//       </div>
+//   );
+// }
+
+// }
+
+// CreateScriptForm.modules = {
+// toolbar: [
+// [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+// [{size: []}],
+// ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+// [{'list': 'ordered'}, {'list': 'bullet'}, 
+// {'indent': '-1'}, {'indent': '+1'}],
+// ['link', 'image', 'video'],
+// ['clean']
+// ],
+// clipboard: {
+// // toggle to add extra line breaks when pasting HTML:
+// matchVisual: false,
+// }
+// }
+// /* 
+// * Quill editor formats
+// * See https://quilljs.com/docs/formats/
+// */
+// CreateScriptForm.formats = [
+// 'header', 'font', 'size',
+// 'bold', 'italic', 'underline', 'strike', 'blockquote',
+// 'list', 'bullet', 'indent',
+// 'link', 'image', 'video'
+// ]

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import CreateScriptForm from './CreateScriptForm';
 import { createScript } from '../actions/scripts'
 import { Card, CardHeader, CardContent, Typography, Button, Paper } from '@material-ui/core';
+import TextEditor from './TextEditor';
 
 const CreateScriptPage = (props) => {
   
@@ -13,13 +14,23 @@ const CreateScriptPage = (props) => {
             <Paper className="create-script-paper">
                 <Card className="craete-script-card">
                 
-                    <Typography variant="headline" component="h1">Create Script</Typography>
+                <Typography variant="headline" component="h1">Create Script</Typography>
                   
-                    <CreateScriptForm onSubmit={(script) => {
+                  {/* <CreateScriptForm 
+                    onSubmit={(script) => {
                         props.dispatch(createScript(script));
                         props.history.push("/scripts");
                         console.log(script);
-                    }}/>
+                    }}
+                  /> */}
+
+                    <TextEditor 
+                    onSubmit={(script) => {
+                        props.dispatch(createScript(script));
+                        props.history.push("/scripts");
+                        console.log(script);
+                    }}
+                  />
                 </Card>
             </Paper>
         </div>
