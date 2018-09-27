@@ -28,6 +28,10 @@ const Script = withRouter(({history, props, dispatch, LastRunBy, LastDateModifie
             </div>
         );
     }
+
+    const scriptContent = (
+        ScriptDesc
+    );
     
     let runButton = false;
 
@@ -46,7 +50,7 @@ const Script = withRouter(({history, props, dispatch, LastRunBy, LastDateModifie
                         <Typography variant="headline" component="h5">Last Run By: {LastRunBy}</Typography>
                         <Typography variant="headline" component="h5">Last Run Pass/Fail: {LastRunPass == 1 ? <b style={{color: "green"}}>Pass</b> : <b style={{color: "red"}}>Fail</b>}</Typography>
                     </div>
-                        <Typography component="p">{ScriptDesc}</Typography>
+                    <div dangerouslySetInnerHTML={{ __html: ScriptDesc }} />
                     
                         <CardActions> 
                             <Button variant="contained" color="primary" onClick={() => {

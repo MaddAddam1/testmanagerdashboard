@@ -1,0 +1,80 @@
+/* Script Text Editor Form */
+
+.edit-script-form-div {
+    height: 100%;
+
+}
+
+.edit-script-form {
+
+    height: 100%;
+ 
+    border: 1.5px solid red;
+
+}
+
+.quill-editor {
+    height: auto;
+    border: 1px solid black;
+
+}
+.button-div {
+    padding: 20px 0 10px;
+}
+
+.script-edit-button-save {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    left: 10px;
+    position: absolute;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.script-edit-button-save:hover {background-color: darkred}
+
+.script-edit-button-save:active {
+  background-color: darkred;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.script-edit-button-cancel {
+    background-color: green; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    left: 130px;
+    position: absolute;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+
+.script-edit-button-cancel:hover {background-color:darkgreen}
+
+.script-edit-button-cancel:active {
+  background-color: darkgreen;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.app .ql-container {
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    background: #fefcfc;
+  }
+  
+  .app .ql-editor {
+    min-height: 25rem;
+  }

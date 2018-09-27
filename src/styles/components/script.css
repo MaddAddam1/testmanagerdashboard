@@ -6,7 +6,7 @@
     position: relative;
     margin: 4rem auto;
     padding: 0;
-    font-size: 2rem;
+    font-size:  1.5rem;
 }
 
 .script-details-div {
@@ -20,12 +20,13 @@
 
 }
 
+.view-script-div h5 {
+    font-size:  1.2rem;
+}
+
 .view-script-div p {
     padding: 1rem;
     font-size:  1.8rem;
     text-align: left;
 }
 
-.script-card {
-    font-size: 2rem;
-}

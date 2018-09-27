@@ -4,6 +4,7 @@ import 'react-quill/dist/quill.snow.css';
 import { Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import moment from 'moment';
+import '../styles/components/textEditor.css';
 
 
 class TextEditor extends React.Component {
@@ -24,13 +25,10 @@ class TextEditor extends React.Component {
     console.log(this.state.ScriptDesc);
   }
 
-  onHandleNameChange = (e) => {
-    this.setState({ ScriptName: e });
-    console.log(this.state.ScriptName);
-  }
   onScriptNameChange = (e) => {
     const ScriptName = e.target.value;
     this.setState(() => ({ ScriptName }));
+    console.log(this.state.ScriptName);
 }
 
   onSubmit = (e) => {
@@ -40,14 +38,13 @@ class TextEditor extends React.Component {
 
       } else {
           this.setState(() => ({ error: ''}))
-          console.log('Script created or edited...')
+          console.log('Script created...')
           this.props.onSubmit({
               ScriptName: this.state.ScriptName,
               ScriptDesc: this.state.ScriptDesc
           })
       }
 
-      console.log(this.state.ScriptDesc);
   };
 
   render() {
@@ -67,7 +64,7 @@ class TextEditor extends React.Component {
           />
 
           <ReactQuill
-            name="ScripDesc" 
+            name="ScriptDesc" 
             value={this.state.ScriptDesc}
             onChange={this.onHandleDescChange}
             theme="snow" 
@@ -76,7 +73,7 @@ class TextEditor extends React.Component {
             placeholder={'Enter script details...'}
           />
 
-          <button>
+          <button className="button">
             Save
           </button>
         </form>

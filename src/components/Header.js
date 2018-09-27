@@ -5,7 +5,7 @@ import DrawerToggleButton from './DrawToggleButton';
 import ScriptList from './ScriptList';
 import Home from './Home';
 
-const Header = () => (
+const Header = (props) => (
     
     <header className="app-header">
     <nav className="app">
@@ -17,6 +17,7 @@ const Header = () => (
                 <li><BrowserRouter><Link to="/" style={{textDecoration: 'none'}} component={Home}>Home</Link></BrowserRouter></li>
                 <li><BrowserRouter><Link to="/scripts" component={ScriptList}style={{textDecoration: 'none'}}>Scripts</Link></BrowserRouter></li>
                 <li><BrowserRouter><Link to="/profile" style={{textDecoration: 'none'}}>Profile</Link></BrowserRouter></li>
+                <li><BrowserRouter><Link to="/create" style={{textDecoration: 'none'}}>Create</Link></BrowserRouter></li>
             </ul>
         </div>
     </nav>
